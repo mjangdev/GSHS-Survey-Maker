@@ -7,12 +7,12 @@
 
 또한 `db.php`와 `admin.php`에 DB 접속 정보를 입력해주셔야 합니다.
 
-```
+```php
 CREATE DATABASE IF NOT EXISTS `gshs_survey`;
 USE `gshs_survey`;
 ```
 
-```
+```php
 CREATE TABLE IF NOT EXISTS `surveys` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `surveys` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-```
+```php
 CREATE TABLE IF NOT EXISTS `survey_answers` (
   `id` int NOT NULL AUTO_INCREMENT,
   `survey_id` int NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `survey_answers` (
 ) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-```
+```php
 CREATE TABLE IF NOT EXISTS `survey_questions` (
   `id` int NOT NULL AUTO_INCREMENT,
   `survey_id` int NOT NULL,
